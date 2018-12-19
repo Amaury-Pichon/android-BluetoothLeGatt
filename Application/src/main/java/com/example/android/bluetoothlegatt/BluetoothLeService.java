@@ -316,4 +316,11 @@ public class BluetoothLeService extends Service {
 
         return mBluetoothGatt.getServices();
     }
+
+    //De moi!!!
+    public BluetoothGattService getHeartService(){
+        if (mBluetoothGatt == null || mBluetoothGatt.getService(UUID.fromString(SampleGattAttributes.HEART_RATE_SERVICE)) == null) return null;
+
+        return mBluetoothGatt.getService(UUID.fromString(SampleGattAttributes.HEART_RATE_SERVICE));
+    }
 }
